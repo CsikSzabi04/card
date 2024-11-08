@@ -325,23 +325,6 @@
 
     </div>
 
-
-    <section class="fade-in text-center mt-16 px-4 max-w-3xl">
-        <h2 class="section-title">Contact</h2>
-        <form id="contactForm" class="mt-6 space-y-4">
-            <div>
-                <input type="text" id="user_name" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-gray-500" required>
-            </div>
-            <div>
-                <input type="email" id="user_email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-gray-500" required>
-            </div>
-            <div>
-                <textarea id="message" placeholder="Your Message" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-gray-500" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="w-full p-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Send Message</button>
-        </form>
-    </section>
-
     <footer class="fade-in mt-20 pb-6 text-center text-gray-500 text-sm">
         &copy; 2024 Csík Szabolcs | Software-developer and - tester 
     </footer>
@@ -403,34 +386,6 @@
                     document.body.style.overflow = 'auto';
                 }
             });
-        });
-
-
-        // Email
-        (function() {
-            emailjs.init("alexszabi04@gmail.com");
-        })();
-
-        document.getElementById('contactForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-            
-            const name = document.getElementById('user_name').value;
-            const email = document.getElementById('user_email').value;
-            const message = document.getElementById('message').value;
-
-            const templateParams = {
-                from_name: name,
-                from_email: email,
-                message: message,
-            };
-
-            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
-                .then(function(response) {
-                    alert('Email sent successfully!');
-                    document.getElementById('contactForm').reset(); 
-                }, function(error) {
-                    alert('Error sending email: ' + JSON.stringify(error));
-                });
         });
     </script>
 </body>
