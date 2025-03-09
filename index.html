@@ -112,125 +112,13 @@
             }
         }
 
-        .section-title {
-            font-size: 2rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #555555;
-        }
-
-        .card-text {
-            color: #333333;
-            letter-spacing: 1px;
-        }
-
-        .imagel-container {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            overflow: hidden;
-        }
-
-        .imager-container {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            overflow: hidden;
-        }
-
-        .imagel-container img {
-            position: absolute;
-            width: 200px;
-            animation: fall 10s linear infinite;
-        }
-
-        .imager-container img {
-            position: absolute;
-            width: 200px;
-            animation: rise 10s linear infinite;
-        }
-
-        .left-images img {
-            left: 5%;
-            opacity: 0;
-        }
-
-        .right-images img {
-            right: 5%;
-            opacity: 0;
-        }
-
-        .left-images img:nth-child(1) { animation-delay: 0s; }
-        .left-images img:nth-child(2) { animation-delay: 2s; }
-        .left-images img:nth-child(3) { animation-delay: 4s; }
-        .left-images img:nth-child(4) { animation-delay: 6s; }
-        .left-images img:nth-child(5) { animation-delay: 8s; }
-
-        .right-images img:nth-child(1) { animation-delay: 0s; }
-        .right-images img:nth-child(2) { animation-delay: 2s; }
-        .right-images img:nth-child(3) { animation-delay: 4s; }
-        .right-images img:nth-child(4) { animation-delay: 6s; }
-        .right-images img:nth-child(5) { animation-delay: 8s; }
-
-        @keyframes fall {
-            0% {
-                transform: translateY(-100px);
-                opacity: 1;
-            }
-            5%{opacity: 0.9;}
-            10%{opacity: 0.8;}
-            20%{opacity: 0.7;}
-            30%{opacity: 0.6;}
-            50%{opacity: 0.5;}
-            70%{opacity: 0.4;}
-            80%{opacity: 0.3;}
-            90%{opacity: 0.2;}
-            95%{opacity: 0.1;}
-            100% {
-                transform: translateY(100vh);
-                opacity: 0;
-            }
-        }
-
-        @keyframes rise {
-            0% {
-                transform: translateY(100vh);
-                opacity: 0;
-            }
-            5%{opacity: 0.1;}
-            10%{opacity: 0.2;}
-            20%{opacity: 0.3;}
-            30%{opacity: 0.4;}
-            70%{opacity: 0.5;}
-            80%{opacity: 0.6;}
-            90%{opacity: 0.8;}
-            95%{opacity: 0.9;}
-            100% {
-                transform: translateY(-100px);
-                opacity: 1;
-            }
-        }
-
-        footer {
-            position: relative;
-            z-index: 10;
-        }
+ 
 
     </style>
 </head>
 
 <body class="flex flex-col items-center pt-12 relative">
-    <!-- 
-    <section class="bg-cover bg-center h-screen flex flex-col justify-center items-center text-white" style="background-image: url('me.png');">
-        <div class="bg-black bg-opacity-50 p-6 rounded-lg">
-            <h1 class="text-5xl font-bold uppercase">Welcome to My Portfolio</h1>
-            <p class="text-xl mt-2">I'm Szabolcs A. Csík, a passionate Software Developer and Tester.</p>
-            <a href="#about" class="mt-4 inline-block bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700">Learn More</a>
-        </div>
-    </section>
-    -->
+
 
     <header class="header-section text-center fade-in w-full max-w-2xl bg-white border-2 border-gray-300 p-6 shadow-md">
         <h1 class="text-5xl font-bold uppercase text-gray-800 pb-5">Szabolcs A. Csík</h1>
@@ -248,119 +136,11 @@
         </div>
     </header>
 
-    <div class="flex flex-wrap justify-center mt-20 max-w-15xl px-2">
 
-        <div class="w-full md:w-1/3 relative flex items-start justify-center left-images">
-            <div class="imagel-container">
-                <img src="html.png" class="fall">
-                <img src="css.png" class="fall">
-                <img src="js.png" class="fall">
-                <img src="node.png" class="fall">
-                <img src="c++.png" class="fall">
-            </div>
-        </div>
-
-        <div class="fade-in text-center w-full md:w-1/3 px-2">
-
-            <section class="flex flex-wrap justify-center p-3">
-                <section class="fade-in text-center w-1/2">
-                    <h2 class="section-title">About Me</h2>
-                    <p class="mt-6 text-lg card-text">
-                        I'm a Software-developer and Tester <br>
-                        I love problem-solving and building complex systems. I strive to create scalable, reliable, and secure solutions.
-                        <br><br>
-                        I'm passionate about design, animation, and interactions, always aiming to build fun websites with great user experiences. I have worked on web, mobile, and game development projects.
-                        <br><br>
-                        I have managed AWS, GCP, Github and various other cloud services for multiple start-ups and my own projects.
-                    </p>
-                </section> 
-
-                <section class="fade-in text-center w-1/2">
-                    <h2 class="section-title">What I Do</h2>
-                    <div class="mt-6">
-                        <p class="text-lg card-text">- Software-developer & Tester</p>
-                        <p class="text-lg card-text">- Backend & Frontend</p>
-                        <p class="text-lg card-text">- Design & Animate</p>
-                        <p class="text-lg card-text">- High-Net-Worth Client Services</p>
-                    </div><br> <br>
-                    <h2 class="section-title">Where I Work</h2>
-                    <div class="mt-6">
-                        <p class="text-lg card-text">Still in Technikum & University</p>
-                        <p class="text-lg card-text">Kecskemét, Hun</p>
-                    </div><br> <br> 
-                    <h2 class="section-title">My songs</h2>
-                    <div class="mt-6">
-                        <p class="pl-2 mt-6 text-lg card-text float:right" >I also create music! Check out my playlist on Suno:</p> <br>
-                        <a href="https://suno.com/playlist/08dc9ca7-c085-47ad-847f-ef0189a3ebfb" target="_blank"><p>Click Here!</p></a>
-                    </div>
-                </section>
-                
-                
-                <section class="fade-in text-center w-1/2 pt-10">
-                    <h2 class="section-title">Projects</h2>
-                    <div class="flex items-start justify-center ">
-                        <p  class="pl-2 mt-6 text-lg card-text hover:text-indigo-50"  ><a href="https://csikszabi04.github.io/tetris/" target="_balnk">Tetris</a></p>
-                        <p  class="pl-2 mt-6 text-lg card-text hover:text-indigo-50" ><a href="https://csikszabi04.github.io/mouse/eger.html" target="_blank">Mouse </a></p>
-                        <p  class="pl-2 mt-6 text-lg card-text hover:text-indigo-50"><a href="https://csikszabi04.github.io/labirintus/" target="_blank">Lab</a></p>
-                        <p  class="pl-2 mt-6 text-lg card-text hover:text-indigo-50"><a href="https://csikszabi04.github.io/box/" target="_blank">Box</a></p>
-                        <p  class="pl-2 mt-6 text-lg card-text hover:text-indigo-50"><a href="https://csikszabi04.github.io/diamond/" target="_blank">Diamond</a> </p>
-                        <p  class="pl-2 mt-6 text-lg card-text hover:text-indigo-50"><a href="https://csikszabi04.github.io/hangman/" target="_blank">Hangman</a> </p>
-                    </div>
-                </section>
-                
-            </section>
-
-        </div>
-    
-        <div class="w-full md:w-1/3 relative flex items-start justify-center right-images">
-            <div class="imager-container">
-                <img src="tail.svg" class="rise">
-                <img src="gith.png" class="rise">
-                <img src="php.png" class="rise">
-                <img src="vsb.png" class="rise">
-                <img src="asd.png" class="rise">
-            </div>
-        </div>
-
-
-    </div>
-
-
-    <section class="fade-in text-center mt-16 px-4 max-w-3xl">
-        <h2 class="section-title"></h2>
-        <form id="contactForm" class="mt-6 space-y-4">
-
-        </form>
-    </section>
-
-    <footer class="fade-in mt-20 pb-6 text-center text-gray-500 text-sm">
-        &copy; 2024 Csík Szabolcs | Software-developer and - tester 
-    </footer>
 
    
 
     <script>
-        // Scroll 
-        let isScrollingDown = false;
-
-        window.addEventListener('scroll', () => {
-            const footer = document.querySelector('footer');
-            const footerRect = footer.getBoundingClientRect();
-
-            if (footerRect.top <= window.innerHeight && !isScrollingDown) {
-                isScrollingDown = true;
-
-                window.scrollTo(0, footerRect.top + window.scrollY);
-            } else if (footerRect.top > window.innerHeight) {
-                isScrollingDown = false;
-            }
-        });
-
-        document.getElementById('contactForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-            alert("Thank you for reaching out. We'll get back to you shortly.");
-            event.target.reset();
-        });
 
         // Card 
         document.addEventListener('DOMContentLoaded', function () {
